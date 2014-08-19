@@ -69,7 +69,7 @@ $f-dropdown-content-padding: rem-calc(20) !default;
   > *:first-child { margin-top: 0; }
   > *:last-child { margin-bottom: 0; }
 
-  @if $content == list {
+  @if $content == "list" {
     width: 100%;
     max-height: $f-dropdown-max-height;
     height: $f-dropdown-height;
@@ -78,7 +78,7 @@ $f-dropdown-content-padding: rem-calc(20) !default;
     font-size: $f-dropdown-font-size;
     z-index: 99;
   }
-  @else if $content == content {
+  @else if $content == "content" {
     padding: $f-dropdown-content-padding;
     width: 100%;
     height: $f-dropdown-height;
@@ -89,7 +89,7 @@ $f-dropdown-content-padding: rem-calc(20) !default;
     z-index: 99;
   }
 
-  @if $triangle == bottom {
+  @if $triangle == "bottom" {
     margin-top: $f-dropdown-margin-top;
 
     &:before {
@@ -117,7 +117,7 @@ $f-dropdown-content-padding: rem-calc(20) !default;
     }
   }
 
-  @if $triangle == #{$default-float} {
+  @if $triangle == $default-float {
     margin-top: 0;
     margin-#{$default-float}: $f-dropdown-margin-right;
 
@@ -138,7 +138,7 @@ $f-dropdown-content-padding: rem-calc(20) !default;
 
   }
 
-  @if $triangle == #{$opposite-direction} {
+  @if $triangle == $opposite-direction {
     margin-top: 0;
     margin-#{$default-float}: -$f-dropdown-margin-right;
 
@@ -161,7 +161,7 @@ $f-dropdown-content-padding: rem-calc(20) !default;
 
   }
 
-  @if $triangle == top {
+  @if $triangle == "top" {
     margin-top: -$f-dropdown-margin-bottom;
     margin-left: 0;
 
